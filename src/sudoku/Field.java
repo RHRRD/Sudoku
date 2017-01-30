@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Field {
 
-    private static List numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+    public final static List numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
     private FieldElement[][] fields;
     private Field prevField;
