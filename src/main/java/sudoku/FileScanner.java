@@ -9,12 +9,13 @@ import java.util.Scanner;
 
 public class FileScanner {
 
-    public FieldElement[][] scanAndSetFieldFromFile(String name, int length) {
-        ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource(name).getFile());
-        FieldElement[][] field = new FieldElement[length][length];
+    public FieldElement[][] scanAndSetFieldFromFile(String name) {
+        File file = new File("fields/" + name);
+        FieldElement[][] field;
         try {
             Scanner scanner = new Scanner(file);
+            int length = scanner.nextInt();
+            field = new FieldElement[length][length];
             while(scanner.hasNext()) {
                 for (int i = 0; i < field.length; i++) {
                     for (int j = 0; j < field[i].length; j++) {

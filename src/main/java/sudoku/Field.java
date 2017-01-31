@@ -1,10 +1,13 @@
 package sudoku;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+@Data
 public class Field {
 
     public final static List numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
@@ -48,27 +51,4 @@ public class Field {
         return prevField;
     }
 
-    public Field getPrevField() {
-        return prevField;
-    }
-
-    public void setPrevField(Field prevField) {
-        this.prevField = prevField;
-    }
-
-    public Point getPoint() {
-        return point;
-    }
-
-    public void setPoint(Point point) {
-        this.point = point;
-    }
-
-    public void setFields(FieldElement[][] fields) {
-        this.fields = fields;
-    }
-
-    public FieldElement[][] getFields() {
-        return this.fields;
-    }
 }

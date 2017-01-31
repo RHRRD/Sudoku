@@ -1,9 +1,11 @@
 package sudoku;
 
+import lombok.Data;
+
 import java.util.Collections;
 import java.util.List;
 
-
+@Data
 public class FieldElement {
 
     private int number;
@@ -25,19 +27,4 @@ public class FieldElement {
         return fieldElement;
     }
 
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public List<Integer> getListOfNumber() {
-        return listOfNumber;
-    }
-
-    public void setListOfNumber(List<Integer> listOfNumber) {
-        this.listOfNumber = listOfNumber;
-    }
 }

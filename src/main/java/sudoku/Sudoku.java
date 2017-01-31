@@ -20,7 +20,7 @@ public class Sudoku {
         Field field = new Field();
         FieldElement[][] mainField;// = Field.createField(field3);
 
-        mainField = new FileScanner().scanAndSetFieldFromFile("field1.txt", 9);
+        mainField = new FileScanner().scanAndSetFieldFromFile(args[0]);
         if(mainField == null) {
             return;
         }
