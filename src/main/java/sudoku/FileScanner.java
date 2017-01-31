@@ -21,9 +21,9 @@ public class FileScanner {
                         field[i][j] = new FieldElement();
                         field[i][j].setNumber(scanner.nextInt());
                         if (field[i][j].getNumber() == 0) {
-                            field[i][j].setListOfNumber(new ArrayList<>(Field.numbers));
+                            field[i][j].setListOfNumber(new ArrayList<Integer>(Field.numbers));
                         } else {
-                            field[i][j].setListOfNumber(Collections.emptyList());
+                            field[i][j].setListOfNumber(Collections.<Integer>emptyList());
                         }
                     }
                 }

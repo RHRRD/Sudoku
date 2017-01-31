@@ -14,12 +14,12 @@ public class FieldElement {
         FieldElement newFieldElement = new FieldElement();
         if (fieldElement.getNumber() != 0) {
             newFieldElement.setNumber(fieldElement.getNumber());
-            newFieldElement.setListOfNumber(Collections.emptyList());
+            newFieldElement.setListOfNumber(Collections.<Integer>emptyList());
             return newFieldElement;
         }
         if (fieldElement.getListOfNumber().size() == 1) {
             newFieldElement.setNumber(fieldElement.getListOfNumber().get(0));
-            newFieldElement.setListOfNumber(Collections.emptyList());
+            newFieldElement.setListOfNumber(Collections.<Integer>emptyList());
             return newFieldElement;
         }
         return fieldElement;

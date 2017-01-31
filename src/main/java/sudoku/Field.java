@@ -20,10 +20,10 @@ public class Field {
                 newField[i][j] = new FieldElement();
                 if (field[i][j] == 0) {
                     newField[i][j].setNumber(0);
-                    newField[i][j].setListOfNumber(new ArrayList<>(numbers));
+                    newField[i][j].setListOfNumber(new ArrayList<Integer>(numbers));
                 } else {
                     newField[i][j].setNumber(field[i][j]);
-                    newField[i][j].setListOfNumber(Collections.emptyList());
+                    newField[i][j].setListOfNumber(Collections.<Integer>emptyList());
                 }
             }
         }

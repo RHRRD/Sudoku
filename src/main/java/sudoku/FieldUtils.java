@@ -14,7 +14,7 @@ public class FieldUtils {
                 }
                 num.add(field.getFields()[i][j].getNumber());
             }
-            num = new ArrayList<>();
+            num = new ArrayList<Integer>();
         }
         for (int i = 0; i < field.getFields().length; i++) {
             for (int j = 0; j < field.getFields()[i].length; j++) {
@@ -23,7 +23,7 @@ public class FieldUtils {
                 }
                 num.add(field.getFields()[j][i].getNumber());
             }
-            num = new ArrayList<>();
+            num = new ArrayList<Integer>();
         }
         for (int i = 0; i < field.getFields().length / 3; i++) {
             for (int j = 0; j < field.getFields()[i].length / 3; j++) {
@@ -35,7 +35,7 @@ public class FieldUtils {
                         num.add(field.getFields()[k][l].getNumber());
                     }
                 }
-                num = new ArrayList<>();
+                num = new ArrayList<Integer>();
             }
         }
         return true;
