@@ -124,7 +124,7 @@ public class FieldUtils {
         for (int i = 0; i < field.getFields().length; i++) {
             for (int j = 0; j < field.getFields()[i].length; j++) {
                 int temp = field.getFields()[i][j].getNumber();
-                field.getFields()[i][j] = FieldElement.evaluateFieldElement(field.getFields()[i][j]);
+                field.getFields()[i][j] = FieldElement.Companion.evaluateFieldElement(field.getFields()[i][j]);
                 if (field.getFields()[i][j].getNumber() != temp) {
                     diff++;
                 }

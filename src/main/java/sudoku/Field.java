@@ -20,14 +20,8 @@ public class Field {
         FieldElement[][] newField = new FieldElement[field.length][field[0].length];
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field[i].length; j++) {
-                newField[i][j] = new FieldElement();
-                if (field[i][j] == 0) {
-                    newField[i][j].setNumber(0);
-                    newField[i][j].setListOfNumber(new ArrayList<Integer>(numbers));
-                } else {
-                    newField[i][j].setNumber(field[i][j]);
-                    newField[i][j].setListOfNumber(Collections.<Integer>emptyList());
-                }
+                newField[i][j] = field[i][j] == 0 ? new FieldElement(0, new ArrayList<Integer>(numbers)) :
+                        new FieldElement(field[i][j], Collections.<Integer>emptyList());
             }
         }
         return newField;
@@ -37,9 +31,7 @@ public class Field {
         FieldElement[][] array = new FieldElement[fields.length][fields[0].length];
         for (int i = 0; i < fields.length; i++) {
             for (int j = 0; j < fields[i].length; j++) {
-                array[i][j] = new FieldElement();
-                array[i][j].setNumber(fields[i][j].getNumber());
-                array[i][j].setListOfNumber(new ArrayList(fields[i][j].getListOfNumber()));
+                array[i][j] = new FieldElement(fields[i][j].getNumber(), new ArrayList(fields[i][j].getListOfNumber()));
             }
         }
         return array;

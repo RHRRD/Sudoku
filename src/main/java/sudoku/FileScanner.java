@@ -19,13 +19,9 @@ public class FileScanner {
             while(scanner.hasNext()) {
                 for (int i = 0; i < field.length; i++) {
                     for (int j = 0; j < field[i].length; j++) {
-                        field[i][j] = new FieldElement();
-                        field[i][j].setNumber(scanner.nextInt());
-                        if (field[i][j].getNumber() == 0) {
-                            field[i][j].setListOfNumber(new ArrayList<Integer>(Field.numbers));
-                        } else {
-                            field[i][j].setListOfNumber(Collections.<Integer>emptyList());
-                        }
+                        int num = scanner.nextInt();
+                        field[i][j] = num == 0 ? new FieldElement(num, new ArrayList<Integer>(Field.numbers)) :
+                                new FieldElement(num, Collections.<Integer>emptyList());
                     }
                 }
             }
