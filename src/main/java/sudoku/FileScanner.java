@@ -20,7 +20,7 @@ public class FileScanner {
                 for (int i = 0; i < field.length; i++) {
                     for (int j = 0; j < field[i].length; j++) {
                         int num = scanner.nextInt();
-                        field[i][j] = num == 0 ? new FieldElement(num, new ArrayList<Integer>(Field.numbers)) :
+                        field[i][j] = num == 0 ? new FieldElement(num, new ArrayList<Integer>(Field.Companion.getNumbers())) :
                                 new FieldElement(num, Collections.<Integer>emptyList());
                     }
                 }

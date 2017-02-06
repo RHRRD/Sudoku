@@ -2,7 +2,7 @@ package sudoku
 
 import java.util.Collections.emptyList
 
-data class FieldElement(var number: Int, var listOfNumber: List<Int>) {
+data class FieldElement(var number: Int, var listOfNumber: MutableCollection<Int>) {
 
     companion object {
 
@@ -11,7 +11,7 @@ data class FieldElement(var number: Int, var listOfNumber: List<Int>) {
                 return FieldElement(fieldElement.number, emptyList())
             }
             if (fieldElement.listOfNumber?.size == 1) {
-                return FieldElement(fieldElement.listOfNumber.get(0), emptyList())
+                return FieldElement(fieldElement.listOfNumber.elementAt(0), emptyList())
             }
             return fieldElement
         }
